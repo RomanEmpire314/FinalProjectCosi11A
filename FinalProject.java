@@ -62,6 +62,7 @@ public class FinalProject {
         //panic
         //hello
         //github
+        //LMAO
       }
     } else if (integerResponse==2){
         System.out.println("After everyone has left, a shadowy figure sneaks up on you and knocks you unconscious with a swift blow to the back of your head");

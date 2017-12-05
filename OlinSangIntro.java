@@ -62,6 +62,8 @@ public class OlinSangIntro {
           }
       } else if (integerResponse==3){
         Methods.panic();
+        System.out.println("What now?");
+        integerResponse = scanner.nextInt();
         //panic
         //hello
         //github
@@ -71,7 +73,7 @@ public class OlinSangIntro {
         System.out.println("After everyone has left, a shadowy figure sneaks up on you and knocks you unconscious with a swift blow to the back of your head");
         System.out.println("You burn to death in the fire");
     } else if (integerResponse==3){
-      //panic
+      Methods.panic();
     }
   }
 }

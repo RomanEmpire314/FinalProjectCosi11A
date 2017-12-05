@@ -1,4 +1,6 @@
+
 import java.util.Scanner;
+
 
 public class OlinSangIntro {
   public static void main(String[] args){
@@ -59,6 +61,7 @@ public class OlinSangIntro {
             }
           }
       } else if (integerResponse==3){
+        Methods.panic();
         //panic
         //hello
         //github

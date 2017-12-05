@@ -1,4 +1,4 @@
-
+//change
 public class Methods {
 
 	public static void panic () {

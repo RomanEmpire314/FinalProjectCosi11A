@@ -12,7 +12,7 @@ public class OlinSangIntro {
     FirstChoice();
   }
 
-    public static void IntroductionAndName(){
+  public static void IntroductionAndName(){
     System.out.println("Hello, you've entered the MSRY simulator! You will be faced with many life or death decisions");
     System.out.println("What is your name?");
   }
@@ -43,7 +43,7 @@ public class OlinSangIntro {
     }
 
 
-public static void SecondChoice(){
+    public static void SecondChoice(){
       int integerResponse = scanner.nextInt();
       if (integerResponse==1){
         ThirdChoice();

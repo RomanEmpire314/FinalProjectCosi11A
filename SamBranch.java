@@ -300,6 +300,10 @@ public class SamBranch {
       public static void goStairs2(){
         System.out.println("As your tears roll down your cheek, JJ's soul springs through your chest, he gives a sly smile to you, he transforms into a banana, and flings himeself past the guards");
         System.out.println("The guards get distracted by the banana and run over to the courtyard, so you and the rest of the students quickly sneak into the SCC");
+        double chooseBoss = Math.random();
+        if (chooseBoss>0.5){
+          YaelBossFight.chooseFirstLook();
+        }
       }
 
       public static void goHill(){

@@ -5,16 +5,7 @@ import java.util.Scanner;
 public class OlinSangIntro {
   public static Scanner scanner = new Scanner(System.in);
   public static void main(String[] args){
-
-
-    IntroductionAndName();
-    String name = scanner.nextLine();
     FirstChoice();
-  }
-
-  public static void IntroductionAndName(){
-    System.out.println("Hello, you've entered the MSRY simulator! You will be faced with many life or death decisions");
-    System.out.println("What is your name?");
   }
 
   public static void FirstChoiceDirections(){
@@ -70,7 +61,7 @@ public class OlinSangIntro {
       } else if (integerResponse==2) {
         System.out.println("You enter the library and start being overrun by the squirrels nipping at you from every angle.");
         double survivalRate = Math.random();
-        if (survivalRate>0.5){
+        if (survivalRate>0.55){
           System.out.println("The squirrels drown you in your own blood");
         } else{
           System.out.println("You manage to take out the squirrels in the library by yourself, Brandeis commerates you as a war hero, and a statue is erected to remember your great deed.");

@@ -76,4 +76,14 @@ public class OlinSangIntro {
       Methods.panic();
     }
   }
+
+  public static void firstChoice(integerResponse){
+    
+  }
+  public static void secondChoice(integerResponse){
+
+  }
+  public static void thirdChoice(integerResponse){
+
+  }
 }

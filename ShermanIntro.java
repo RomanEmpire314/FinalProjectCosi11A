@@ -35,14 +35,14 @@ public class ShermanIntro {
 
       }
       else {
-        System.out.println("You run over to your dorm in North. As swipe in you see more squirrels. They're omnipresent in campus buildings!");
+        System.out.println("You run over to your dorm in North. As swipe in you see more squirrels. They seem to be omnipresent in campus buildings!");
         System.out.println("You receive a text message from a friend saying to come to Gosman because it is safe there.");
         System.out.println("What to do now?");
-        System.out.println("1. Try to fight off more squirrels.");
+        System.out.println("1. Try to fight off the squirrels.");
         System.out.println("2. Head over to Gosman.");
         integerResponse = scanner.nextInt();
           if (integerResponse==1) {
-            System.out.println("Your attempt at fighting the squirrels is unsuccessful this time. You died.");
+            System.out.println("Your attempt at fighting the squirrels is unsuccessful. You died.");
           }
           else if (integerResponse==2) {
             System.out.println("You slam the door shut on the squirrels and run as fast as you can to Gosman.");

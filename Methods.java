@@ -21,7 +21,8 @@ public class Methods {
 		} else if (change < 0) {
 			System.out.println("You've lost" + change + "health.");
 			return (health + change);
-		}
+		} 
+		return (health + change);
 
  	}
 }

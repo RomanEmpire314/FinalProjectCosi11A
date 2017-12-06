@@ -15,9 +15,8 @@ public static void main(String[] args){
       }
 
 public static void chooseFirstLook(){
-  System.out.println("Oh no. Your suspicions were correct. Yael is somehow involved - and - oh no - there she is!");
-  System.out.println("She looks so powerful!");
-  System.out.println("You have finally reached what seems to be Yael's lair. There is mail everywhere and all her servants are squirrels. You need to find the control room to locate your final project");
+
+  System.out.println("You have reached what seems to be Yael's lair. There is mail everywhere and all her servants are squirrels. You need to find the control room to locate your final project");
   int health = 100;
   Scanner scanner = new Scanner(System.in);
   chooseFirstlookDirections();

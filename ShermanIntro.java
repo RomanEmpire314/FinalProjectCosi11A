@@ -20,17 +20,17 @@ public class ShermanIntro {
       System.out.println("You need to get to Gosman before it's too late!!!");
       System.out.println("You anxiously start making your way over to Gosman when you take a bit of the orange.");
       System.out.println("It was a magical orange and that one bite teleports you directly to Gosman!");
+      SamBranch.goGosman();
     }
     else if (integerResponse==2) {
-        System.out.println("You enter upper usdan and see an endless stream of evil looking squirrels.");
-        System.out.println("Fight or run?");
-        //we need a fight method here as well
-        //if fight we could have them die, or have a high risk of dying. and then otherwise have them run to Gosman
+        System.out.println("You enter upper usdan and see an endless stream of evil looking squirrels who you choose to fight off.");
+        //if they fight we could have them die, or have a high risk of dying. and then otherwise have them run to Gosman
         double survivalrate = Math.random();
         if (survivalrate>0.5) {
           System.out.println("You have died. The squirrels have won the day.");
         } else {
           System.out.println("You have survived but are hurt. A friend told you that Gosman is safe. You run over to Gosman.");
+          SamBranch.goGosman();
         }
 
       }
@@ -46,6 +46,7 @@ public class ShermanIntro {
           }
           else if (integerResponse==2) {
             System.out.println("You slam the door shut on the squirrels and run as fast as you can to Gosman.");
+            SamBranch.goGosman();
           }
 
       }

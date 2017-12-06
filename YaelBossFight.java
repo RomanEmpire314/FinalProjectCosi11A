@@ -3,17 +3,19 @@ import java.util.Random;
 
 public class YaelBossFight{
 
-
   private static Random random;
 
 public static void main(String[] args){
 
     chooseFirstLook();
 
-
-
       }
 
+/** This is the user's first choice of the boss fight.
+it prompts the instructions and context, assigns full health,
+and sets up the choices (and the next method that each choice provokes)
+
+*/
 public static void chooseFirstLook(){
 
   System.out.println("You have reached what seems to be Yael's lair. There is mail everywhere and all her servants are squirrels. You need to find the control room to locate your final project");
@@ -29,13 +31,21 @@ public static void chooseFirstLook(){
     choiceThree();
   }
 }
-
+/** These are the directions that explain the first choice the user has to make
+*/
 public static void chooseFirstlookDirections(){
   System.out.println("Which corrider do we go down to get to the control room?");
   System.out.println("1. Left");
   System.out.println("2. Center");
   System.out.println("3. Right");
 }
+
+/** This method is prompted when the user selects the left corrider
+in the first choice.
+they fall into a pit of snakes and lose health via the changeHealth method
+located in the methods file.
+@param health of user to change
+*/
 
 public static void SnakesChoiceOne(int health){
   System.out.println("You have fallen into a pit of snakes!!!!! and lost health points! Not dead yet though! Get outta there!");
@@ -44,6 +54,14 @@ public static void SnakesChoiceOne(int health){
   chooseSecond(health);
 }
 
+/** This is the second chocie the user has to make.
+the user has to enter jump to jump over some barrels,
+and if they do not enter jump they lose health
+via the changeHealth method located in the methods file.
+if they enter jump, the third choice they have to make is prompted
+via the choiceThree method down below.
+@param health of user
+*/
 public static void chooseSecond(int health){
   Scanner scanner = new Scanner(System.in);
 
@@ -63,13 +81,17 @@ while(!stringResponse.equals("jump")){
   }choiceThree();
 
 }
-
+/** these are the instructions for the second choice (above)
+*/
 public static void chooseSecondDirections(){
   System.out.println("She's throwing barrels at you!!!!");
   System.out.println("Enter jump");
 
 }
-
+/** This is the user's third choice
+they have to enter boost to catch up,
+when they enter boost, the fourth choice is prompted
+*/
 public static void choiceThree(){
   Scanner scanner = new Scanner(System.in);
   System.out.println("Ok, good to know that you know how to think on your feet.");
@@ -85,6 +107,11 @@ while(!stringResponse.equals("boost")){
 
 }choiceFour();
 }
+/** This is the user's fourth choice. They have to choose a door to go through
+if they choose door 1 they die
+if they choose door 2, it goes to the final challenge
+if they choose door 3, it goes to the alterGravity challenge
+*/
 
 public static void choiceFour(){
   choiceFourDirections();
@@ -107,6 +134,10 @@ public static void choiceFour(){
 
 }
 
+/** This method is prompted by entering door three of the FourthChoice
+They need to enter the stated String exactly.
+when they do, the final challenge is prompted.
+*/
 public static void alterGravity(){
 
   Scanner scanner = new Scanner(System.in);
@@ -123,6 +154,8 @@ public static void alterGravity(){
 }finalChallenge();
 }
 
+/** These are the directions prompted for the user's FourthChoice
+*/
 
 public static void choiceFourDirections(){
   System.out.println("She's gone behind through a door but you didn't see which one!");
@@ -131,6 +164,11 @@ public static void choiceFourDirections(){
   System.out.println("2. Door Two");
   System.out.println("3. Door Three");
 }
+
+/** this is the user's final challenge of the boss fight.
+the user has to enter the answer to a puzzle annogram (the answer is Grace Hopper)
+when they do, they have won! 
+*/
 
 public static void finalChallenge(){
   Scanner scanner = new Scanner(System.in);

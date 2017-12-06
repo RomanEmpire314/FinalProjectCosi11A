@@ -8,16 +8,16 @@ public class YaelBossFight{
 
 public static void main(String[] args){
 
-  System.out.println("Oh no. Your suspicions were correct. Yael is somehow involved - and - oh no - there she is!");
-  System.out.println("She looks so powerful!");
-  System.out.println("You have finally reached what seems to be Yael's lair. There is mail everywhere and all her servants are squirrels. You need to find the control room to locate your final project");
-  chooseFirstLook();
+    chooseFirstLook();
 
 
 
       }
 
 public static void chooseFirstLook(){
+  System.out.println("Oh no. Your suspicions were correct. Yael is somehow involved - and - oh no - there she is!");
+  System.out.println("She looks so powerful!");
+  System.out.println("You have finally reached what seems to be Yael's lair. There is mail everywhere and all her servants are squirrels. You need to find the control room to locate your final project");
   int health = 100;
   Scanner scanner = new Scanner(System.in);
   chooseFirstlookDirections();
@@ -40,7 +40,7 @@ public static void chooseFirstlookDirections(){
 
 public static void SnakesChoiceOne(int health){
   System.out.println("You have fallen into a pit of snakes!!!!! and lost health points! Not dead yet though! Get outta there!");
-  health = loseHealth(health);
+  health = Methods.changeHealth(health,-50);
   System.out.printf("health = %d%n",health);
   chooseSecond(health);
 }
@@ -52,8 +52,8 @@ public static void chooseSecond(int health){
   chooseSecondDirections();
   String stringResponse = scanner.nextLine();
 while(!stringResponse.equals("jump")){
-    System.out.println("You are bad at jumping barrels! -2 health!");
-    health = loseHealth(health);
+    System.out.println("You are bad at jumping barrels! -10 health!");
+    health = Methods.changeHealth(health,-10);
     System.out.printf("health = %d%n",health);
     chooseSecondDirections();
     stringResponse = scanner.nextLine();
@@ -149,9 +149,5 @@ public static void finalChallenge(){
 System.out.println("You have outwit, outplayed, outlasted Yael!");
 }
 
-  public static int loseHealth(int health){
-    health = health - 2;
-    return health;
- }
 
 }

@@ -49,24 +49,8 @@ public static void SecondChoice(){
 
 
       } else if(integerResponse==2){
-          System.out.println("there is a 50% chance you live, 50% chance you die by these flames");
-          double survivalrate = Math.random();
-          if(survivalrate > 0.5){
-            System.out.println("You have died. The flames have overtaken you. Start over?");
-            }else{
-              System.out.println("You have survived! And you see Mehmet running off with your laptop!");
-              System.out.println("Do you want to (1) chase him or (2) go back outside to meet up with the class");
-              integerResponse = scanner.nextInt();
-              if(integerResponse == 1){
-                if(survivalrate < .02){
-                  System.out.println("You've caught him and saved your project! you won!");
-                }else if(Math.random() > .02){
-                  System.out.println("He's too fast and you've tripped!! but now you've got a text saying to go to Gosman");
-                }
-            }if(integerResponse == 2){
-              System.out.println("everyone is going to Gosman and you follow them!");
-            }
-          }
+        FourthChoice();
+
       } else if (integerResponse==3){
         Methods.panic();
 
@@ -99,8 +83,38 @@ public static void ThirdChoiceDirections(){
   System.out.println("3. Assimilate");
 }
 
+public static void FourthChoice(){
+  System.out.println("there is a 50% chance you live, 50% chance you die by these flames");
+  double survivalrate = Math.random();
+  if(survivalrate > 0.5){
+    System.out.println("You have died. The flames have overtaken you. Start over?");
+    }else{
+      FifthChoice();
 
+  }
+}
 
+public static void FifthChoiceDirections(){
+  System.out.println("You have survived! And you see Mehmet running off with your laptop!");
+  System.out.println("Do you want to:");
+  System.out.println("1. Chase him");
+  System.out.println("2. Go back outside to meet up with the class");
+}
+
+public static void FifthChoice(){
+  double survivalrate = Math.random();
+  FifthChoiceDirections();
+  int integerResponse = scanner.nextInt();
+  if(integerResponse == 1){
+    if(survivalrate < .02){
+      System.out.println("You've caught him and saved your project! you won!");
+    }else if(Math.random() > .02){
+      System.out.println("He's too fast and you've tripped!! but now you've got a text saying to go to Gosman");
+    }
+}if(integerResponse == 2){
+  System.out.println("everyone is going to Gosman and you should follow them!");
+}
+}
 
   public static void olinSang(){
     System.out.println("You're in CS11a and the fire alarm goes off");

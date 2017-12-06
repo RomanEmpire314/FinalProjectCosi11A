@@ -3,8 +3,9 @@ import java.util.Scanner;
 
 
 public class OlinSangIntro {
+  public static Scanner scanner = new Scanner(System.in);
   public static void main(String[] args){
-    Scanner scanner = new Scanner(System.in);
+
     System.out.println("Hello, you've entered the MSRY simulator! You will be faced with many life or death decisions");
     System.out.println("What is your name?");
     String name = scanner.nextLine();
@@ -62,12 +63,8 @@ public class OlinSangIntro {
           }
       } else if (integerResponse==3){
         Methods.panic();
-        System.out.println("What now?");
-        integerResponse = scanner.nextInt();
-        //panic
-        //hello
-        //github
-        //LMAO
+
+
       }
     } else if (integerResponse==2){
         System.out.println("After everyone has left, a shadowy figure sneaks up on you and knocks you unconscious with a swift blow to the back of your head");
@@ -77,13 +74,41 @@ public class OlinSangIntro {
     }
   }
 
-  public static void firstChoice(integerResponse){
-    
+  public static void olinSang(){
+    System.out.println("You're in CS11a and the fire alarm goes off");
+    System.out.println("What do you want to do?:");
+    System.out.println("1. Go outside with the rest of the class");
+    System.out.println("2. Stay Put");
+    System.out.println("3. Panic!");
+    int integerResponse = scanner.nextInt();
+    if (integerResponse==1) {
+      goOut();
+    }
   }
-  public static void secondChoice(integerResponse){
 
+  public static void goOut(){
+    System.out.println("Your friend Rachel calls over to you and asks if you want to just leave to the library?");
+    System.out.println("You realize that you left your laptop in the classroom, and you had your only copy of your final project saved on it.");
+    System.out.println("What would you like to do?");
+    System.out.println("1. Go with her");
+    System.out.println("2. Run back inside and try to grab the laptop");
+    System.out.println("3. Panic!");
+    int integerResponse = scanner.nextInt();
+    if (integerResponse==1){
+      goLibrary();
+    }
   }
-  public static void thirdChoice(integerResponse){
 
+  public static void goLibrary(){
+    System.out.println("You go with Rachel to the library to see it over run with dangerous looking squirrels!");
+    System.out.println("You hear people yelling to run to Gosman, with huge crowds of people fleeing past you");
+    System.out.println("Choose your path:");
+    System.out.println("1. Go to Gosman with the crowd");
+    System.out.println("2. Attempt to fight the horde of squirrels");
+    System.out.println("3. Assimilate");
+    int integerResponse = scanner.nextInt();
+    if (integerResponse==1){
+      SamBranch.goGosman();
+    }
   }
 }

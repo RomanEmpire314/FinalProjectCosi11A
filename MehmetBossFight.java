@@ -66,7 +66,7 @@ public class MehmetBossFight {
           System.out.println("You stay on top. You tell him: 'It doesn't have to be like this. Just give up now or else' ");
           if(survivalrate>0.3) {
             System.out.println("Mehmet: 'No way. I will not let you defeat me' ");
-            System.out.println(name+": Alright, so be it. Just know that you chose this.");
+            System.out.println(": Alright, so be it. Just know that you chose this.");
             System.out.println("You use your currently dominant position unrelentingly to brutalize him. He seems to be knocked out and so you get up. Congrats, you won!");
           }
           else if(survivalrate<=0.3) {

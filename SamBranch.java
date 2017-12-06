@@ -10,6 +10,7 @@ public class SamBranch {
   }
 
       public static void goGosman(){
+        System.out.println("You've arrived at Gosman!");
         System.out.println("Worrying sounds of people crying surround you as you enter Gosman.");
         System.out.println("The dean Jamele Adams pulls you aside and says: <You guys have to be the one to stop this! You have to believe in yourself!");
         System.out.println("More importantly, I know a way you can save us. I know an administrative secret. Specifically, an administrative secret tunnel, called the Louis way that conencts through Gosman.");

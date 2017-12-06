@@ -66,7 +66,7 @@ public class MehmetBossFight {
           System.out.println("You stay on top. You tell him: 'It doesn't have to be like this. Just give up now or else' ");
           if(survivalrate>0.3) {
             System.out.println("Mehmet: 'No way. I will not let you defeat me' ");
-            System.out.println(": Alright, so be it. Just know that you chose this.");
+            System.out.println(name+": Alright, so be it. Just know that you chose this."); //figure out this name stuff
             System.out.println("You use your currently dominant position unrelentingly to brutalize him. He seems to be knocked out and so you get up. Congrats, you won!");
           }
           else if(survivalrate<=0.3) {
@@ -76,9 +76,22 @@ public class MehmetBossFight {
         }
       } else if (survivalrate>0.3) {
           System.out.println("You both get into a clinch with your arms interlocked and break after a few seconds of jostling for position. You break after a stalemate.");
+          System.out.println("It is clear neither of you will get the better of the other. The conflict ends with no winner.")
       } else {
         System.out.println("You are able to get him down and hurt him with some body blows. He is hurt by them.");
         //deduct 20 health points from Mehmet
+        System.out.println("What do you want to do next?");
+        System.out.println("1) Get off him and proclaim victory!");
+        System.out.println("2) Continue with the body blows");
+        integerResponse = scanner.nextInt();
+          if(integerResponse==1) {
+            System.out.println(name+":'I am victorious! Get at me cuh!'");
+          }
+          else{
+            System.out.println("You continue to brutalize Mehmet. Much to his dismay. Finally you decide he's had enough and he seems near the end. So you let up.");
+            System.out.println("You have defeated the almighty boss Mehmet. Congrats!");
+          }
+
 
       }
     }

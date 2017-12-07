@@ -16,6 +16,7 @@ public class RomanBoss {
     number = (int) Math.floor(Math.random() * 101);
 
     System.out.println("Roman has thought of a number, what's your guess: ");
+    guess = rbScanner.nextInt();
 
   }
 }

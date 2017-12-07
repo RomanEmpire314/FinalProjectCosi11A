@@ -1,7 +1,7 @@
 //change
 public class Methods {
 
-	public static Scanner mScanner(System.in);
+	public static Scanner mScanner = new Scanner(System.in);
 
 	public static void panic () {
 		System.out.println("You PANICKED");

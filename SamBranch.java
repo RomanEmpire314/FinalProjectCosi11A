@@ -9,6 +9,10 @@ public class SamBranch {
     goGosman();
   }
 
+      /*
+       Prints intro to Gosman message to orient the user, and chooses where to go next.
+      **/
+
       public static void goGosman(){
         System.out.println("You've arrived at Gosman!");
         System.out.println("Worrying sounds of people crying surround you as you enter Gosman.");
@@ -26,11 +30,19 @@ public class SamBranch {
         }
       }
 
+
+      /*
+      If you go to the squash room you die b/c of giant squirrels. This just prints that to the user
+      **/
       public static void squash(){
         System.out.println("When you arrive to the courts you see them full of athletic, muscular squirrels and they squash the ball so hard it bounces off the wall and hits you in the face... ");
         System.out.println("You die...");
       }
 
+
+      /*
+      Just prints a bunch of stuff to the user based on a choice the user made.
+      **/
       public static void squirrelKingIntro(){
         System.out.println("Open the door leads to a statue of a squirrel wearing a crown and holding a sesame bagel with jalapeno salsa schmear.");
         System.out.println("The statue is engraved: Our time of reckoning will come when one can give their life for glory");
@@ -38,6 +50,10 @@ public class SamBranch {
         System.out.println("Instantly, the air around you starts to vibrate and a flash of light consumes the room. Screams shake the room, … then he is transported into the statue of the squirrel king, bringing it to life");
       }
 
+
+      /*
+      Prompts the user for one of three choices, and goes to the corresponding method based on what they chose.
+      **/
       public static void squirrelKingChoice(){
         System.out.println("1. Say: JJ?");
         System.out.println("2. Say what is happening");
@@ -53,12 +69,21 @@ public class SamBranch {
       }
     }
 
+
+    /*
+    Just prints out stuff to the user and then pulls up the squirrelKingChoice() method.
+    **/
       public static void squirrelKing1(){
         System.out.println("JJ, I do not know of this JJ, but since I have been awoken I can only assume he is my soul boy. I am sorry for his loss, but he chose this path at a very young age.");
         System.out.println("I will replace him as your battle companion for the time being");
         squirrelKingChoice();
       }
-
+      
+      /*
+      Squirrel encounter continues
+      Has a chance for a fight with the squirrel king or get teleported to SCC
+      If teleported, it chooses randomly between the 4 boss fights
+      */
       public static void squirrelKing2(){
         System.out.println("My time has come again, someone has been abusing the power of my army, impersonating me and committing treason. It can be the only reason that I have been awoken");
         System.out.println("1. Say: How do we stop this?");
@@ -67,6 +92,7 @@ public class SamBranch {
         if (integerResponse==1){
           System.out.println("There is no time, the MSRY crew is in the SCC, and they must be stopped! I will bring you there.");
           System.out.println("You and your friends are teleported to the SCC.");
+          double chooseBoss = Math.random();
           if (chooseBoss<=0.25){
             YaelBossFight.chooseFirstLook();
           } else if (chooseBoss>0.25&&chooseBoss<=0.50){
@@ -75,7 +101,7 @@ public class SamBranch {
             SamBoss.samBossIntro();
           } else {
             RomanBoss.firstFight();
-          }    
+          }
         } else if (integerResponse==2){
           double survivalRate = Math.random();
           if (survivalRate>0.9){
@@ -86,6 +112,10 @@ public class SamBranch {
           }
         }
       }
+
+      /*
+       User looks into mirror and recieves a message, chooses their path from there...
+      */
 
       public static void lookMirror(){
         System.out.println("A celestial being pulls you and your friends through the mirror.");
@@ -101,6 +131,10 @@ public class SamBranch {
           squirrelKingChoice();
         }
       }
+
+      /*
+      Weight room scene, user chooses a way to look for secret entrance, determines their path
+      */
 
       public static void weightRoom(){
         System.out.println("You, Rachel, and JJ go to the weight room and start looking around for a secret entrance");
@@ -118,6 +152,11 @@ public class SamBranch {
         }
       }
 
+      /*
+      User drops weights on the floor, but nothing happens and they are attacked
+      They are forced to fight and have a chance to die.
+      */
+
       public static void dropWeights(){
         System.out.println("Nothing happens...");
         System.out.println("Now you hear screams, people running, and the sound of an overwhelming horde of squirrels approaching.");
@@ -129,7 +168,9 @@ public class SamBranch {
           System.out.println("The squirrel elites sever your head from your body.");
         }
       }
-
+      /*Method for winning the weightRoom fights
+      User has two choices from here
+      */
       public static void weightRoomFightWin(){
         System.out.println("You three manage to fight them off and they run away for backup.");
         System.out.println("The Dean comes running down and says: \"There is no more time to look for the entrance. We have to fight our way to the SCC! That's where they are all coming from\"");
@@ -145,6 +186,9 @@ public class SamBranch {
           }
       }
 
+      /*Andrew destroys you in basketball and you die
+      */
+
       public static void AndrewYanTheMan(){
         System.out.println("You say goodbye to Rachel, JJ, and all the other students and say there is something more important to be handled.");
         System.out.println("You and Andrew grab a ball and begin a heated 1v1 match.");
@@ -152,6 +196,8 @@ public class SamBranch {
         System.out.println("You fall over and crack your skull on the ground, dying on impact");
       }
 
+      /* User chooses their path on the street outside of Gosman
+      */
       public static void choosePathStreet(){
         System.out.println("1. Go all the way around towards the admissions building");
         System.out.println("2. Go up those stairs right past the little information shack in the entrance loop");
@@ -169,6 +215,10 @@ public class SamBranch {
         }
       }
 
+      /*
+      User trys to cross street, has a chance to die, if not story continues
+      */
+
       public static void goStreet(){
         double survivalRate = Math.random();
         if (survivalRate>0.8){
@@ -178,6 +228,10 @@ public class SamBranch {
           choosePathStreet();
         }
       }
+
+      /*
+      User goes outside of Gosman with their group and has to make another choice
+      */
 
       public static void goOutside(){
         System.out.println("The dean and you lead the students out of Gosman, ready for battle, but find nothing right outside the doors.");
@@ -195,10 +249,17 @@ public class SamBranch {
         }
       }
 
+      /*Combines the goBridge methods
+      */
+
       public static void goBridge(){
         goBridgeIntro();
         goBridgeChoice();
       }
+
+      /*
+      User has to choose whether or not to fight
+      */
 
       public static void goBridgeChoice(){
         System.out.println("1. Attack the squirrel wizard");
@@ -214,6 +275,10 @@ public class SamBranch {
         }
       }
 
+      /*
+      User walks up to the bridge, method prints into to the scence
+      */
+
       public static void goBridgeIntro(){
         System.out.println("You walk up the steps to the bridge and a fireball flies past your head.");
         System.out.println("A squirrel wizard on the other end of the bridge snickers, and yells to you:");
@@ -221,10 +286,18 @@ public class SamBranch {
         System.out.println("What do you want to do?");
       }
 
+      /*
+      User trys to get away but their path is blocked
+      */
+
       public static void runAway(){
         System.out.println("A fiery wall shoots up and blocks your path");
         goBridgeChoice();
       }
+
+      /*
+      User attacks the Wizard, then the story goes on
+      */
 
       public static void attackWizard(){
         System.out.println("You, the dean, Rachel and JJ run to attack the wizard but he throws a fireball straight at you.");
@@ -247,6 +320,10 @@ public class SamBranch {
         }
       }
 
+      /*
+      User takes the admissions path and has to chose whether or not to fight
+      */
+
       public static void goAdmissions(){
         System.out.println("You hear disgruntled students, confused why you chose the longest way to the SCC, but they follow you anyways");
         System.out.println("You see a small group of squirrel scouts in the distance");
@@ -263,10 +340,14 @@ public class SamBranch {
         }
       }
 
+      /*
+      Determines the results of the fight based on chance, and determines what Boss you fight based on chance
+      */
+
       public static void goAdmissions1(){
         System.out.println("You run up to the squirrel scouts and get involved in a wallop");
         double survivalRate = Math.random();
-        if (survivalRate>0.8){
+        if (survivalRate>0.9){
           System.out.println("The squirrel scouts spear you like a kebab and use your body as a weapon to kill the rest of your friends.");
         } else {
           System.out.println("You and your friends defeat the pack of squirrels, steal their spears, and head to the SCC");
@@ -283,15 +364,24 @@ public class SamBranch {
         }
       }
 
+      /*
+      User has a chance to trip and die, or go back to the last method
+      */
+
       public static void goAdmissions2(){
         System.out.println("Turning around, you trip on your shoelaces");
         double survivalRate = Math.random();
-        if (survivalRate>0.8){
+        if (survivalRate>0.9){
           System.out.println("You crack your neck on the pavement and die");
         } else {
           System.out.println("You regain yor balance and head back to the information shack.");
+          choosePathStreet();
         }
       }
+
+      /*
+      User goes up the stairs, has a chance to go fight boss or die based on their choice
+      */
 
       public static void goStairs(){
         System.out.println("You take the stairs up to the SCC and they were completely unguarded.");
@@ -312,10 +402,18 @@ public class SamBranch {
         }
       }
 
+      /*T
+      he user dies for picking the wrong option
+      */
+
       public static void goStairs1(){
         System.out.println("The two guards spot your group running at them and they pull out their laser rifles and obliterate everyone");
       }
 
+
+      /**
+      This method provides a 25% to fight each boss, after printing some emotionally charged, necessary, beautiful context to tie up the grief of JJ’s death.
+      */
       public static void goStairs2(){
         System.out.println("As your tears roll down your cheek, JJ's soul springs through your chest, he gives a sly smile to you, he transforms into a banana, and flings himeself past the guards");
         System.out.println("The guards get distracted by the banana and run over to the courtyard, so you and the rest of the students quickly sneak into the SCC");
@@ -331,10 +429,14 @@ public class SamBranch {
         }
       }
 
+
+      /**
+      This method gives a 30% chance of surviving the boulder and allowing you to fight one of the bosses. Which boss you fight is determined by a Math.random() 25% chance to fight each. Otherwise, you have a 90% chance of being crushed by the boulder.
+      */
       public static void goHill(){
         System.out.println("a boulder comes rolling down the hill");
         double survivalRate = Math.random();
-        if (survivalRate>0.9){
+        if (survivalRate>0.7){
           System.out.println("You dodge the boulder! Nice! Now you run into the SCC");
           double chooseBoss = Math.random();
           if (chooseBoss<=0.25){

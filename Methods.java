@@ -16,12 +16,12 @@ public class Methods {
 		if ((health + change) <= 0) {
 			//die
 		} else if (change >= 0) {
-			System.out.println("You've gained" + change + "health."); 
+			System.out.println("You've gained " + change + " health.");
 			return (health + change);
 		} else if (change < 0) {
-			System.out.println("You've lost" + change + "health.");
+			System.out.println("You've lost " + change + " health.");
 			return (health + change);
-		} 
+		}
 		return (health + change);
 
  	}

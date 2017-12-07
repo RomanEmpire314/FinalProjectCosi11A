@@ -78,7 +78,7 @@ public class SamBranch {
         System.out.println("I will replace him as your battle companion for the time being");
         squirrelKingChoice();
       }
-      
+
       /*
       Squirrel encounter continues
       Has a chance for a fight with the squirrel king or get teleported to SCC
@@ -374,7 +374,7 @@ public class SamBranch {
         if (survivalRate>0.9){
           System.out.println("You crack your neck on the pavement and die");
         } else {
-          System.out.println("You regain yor balance and head back to the information shack.");
+          System.out.println("You regain your balance and head back to the information shack.");
           choosePathStreet();
         }
       }

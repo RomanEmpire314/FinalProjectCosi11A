@@ -1,45 +1,80 @@
 import java.util.Scanner;
 
 public class MehmetBossFight {
+  public static Scanner scanner = new Scanner(System.in);
   public static void main(String[] args){
-    System.out.println("");
-    System.out.println("You have caught yourself up in a conflict with Mehmet!");
-    System.out.println("Drop any weapons you might have. None are allowed in this battle!");
-    System.out.println("What's your first move?");
-    System.out.println("1) Charge at him and try to tackle him down to the ground!");
-    System.out.println("2) Start on the defensive. Let him make the first move.");
-    double survivalrate = Math.random();
-    Scanner scanner = new Scanner(System.in);
-    int integerResponse = scanner.nextInt();
-    if (integerResponse==1) {
-      if(survivalrate>0.9) {
-        System.out.println("You got him down adeptly and apprehend him completely. Great job, you've defeated the boss Mehmet!");
-      } else {
-        System.out.println("Mehmet blocked your takedown attempt and reversed it on you. You got hurt by this maneuver.");
-        //use losehealth here, make the user lose 10 health points
+    BossFightIntro();
+    ChoiceOne();
+}
+    public static void BossFightIntro() {
+      System.out.println("You have caught yourself up in a conflict with Mehmet!");
+      System.out.println("Drop any weapons you might have. None are allowed in this battle!");
+    }
+    public static void ChoiceOneDirections() {
+      System.out.println("What's your first move?");
+      System.out.println("1) Charge at him and try to tackle him down to the ground!");
+      System.out.println("2) Start on the defensive. Let him make the first move.");
+    }
+
+    public static void ChoiceOne(int health) {
+      int health = 100;
+      ChoiceOneDirections();
+      int integerResponse = scanner.nextInt();
+      if (integerResponse==1) {
+        double survivalrate = Math.random();
+          if(survivalrate>0.9) {
+            System.out.println("You got him down adeptly and apprehend him completely. Great job, you've defeated the boss Mehmet!");
+          } else {
+            System.out.println("Mehmet blocked your takedown attempt and reversed it on you. You got hurt by this maneuver.");
+            health = Methods.changeHealth(health,-10);
+            System.out.printf("health = %d%n",health);
+            ChoiceTwoDirections();
+            ChoiceTwo();
+      }
+    } else {
+      StartDefensive();
+    }
+  }
+
+  public static void StartDefensive() {
+      int survivalrate = Math.random();
+      if(survivalrate>0.6) {
+        System.out.println("You were anticipating his takedown attempt and made him pay for it.");
         System.out.println("What is your next move?");
-        System.out.println("1) Attempt to wrestle out of the position where he's on top of you.");
-        System.out.println("2) Try to throw a punch at him.");
-        integerResponse = scanner.nextInt();
-          if(integerResponse==1){
-            survivalrate = Math.random();
-            if(survivalrate>0.4){
-              System.out.println("You successfully jostle out of the bad position and reverse it back on him. You win!");
-            }
-            else{
-              System.out.println("Mehmet totally blocks your attempt, despite your best efforts. You finally succumb to defeat.");
-            }
-          }
-          else{
-            survivalrate = Math.random();
-            if(survivalrate>0.5) {
-              System.out.println("The punch connects cleanly and knocks him out. Congrats, you've won!");
-            } else{
-              System.out.println("The punch misses and Mehmet gets into an even more dominating position. You give up because there is no hope now.");
-            }
-          }
+        System.out.println("1) Attempt a submission to get him to tap out.");
+        System.out.println("2) Stay on top of him and tell him he can give up now or endure more brutality.");
+        else if (survivalrate>0.3) {
+            System.out.println("You both get into a clinch with your arms interlocked and break after a few seconds of jostling for position. You break after a stalemate.");
+            System.out.println("It is clear neither of you will get the better of the other. The conflict ends with no winner.")
+  }
+
+  public static void ChoiceTwoDirections() {
+    System.out.println("What is your next move?");
+    System.out.println("1) Attempt to wrestle out of the position where he's on top of you.");
+    System.out.println("2) Try to throw a punch at him.");
+  }
+
+  public static void ChoiceTwo() {
+    int integerResponse = scanner.nextInt();
+    if(integerResponse==1) {
+      double survivalrate = Math.random();
+      if(survivalrate>0.4){
+        System.out.println("You successfully jostle out of the bad position and reverse it back on him. You win!");
+      }
+        else{
+          System.out.println("Mehmet totally blocks your attempt, despite your best efforts. You finally succumb to defeat.");
+      }
+      else{
+        survivalrate = Math.random();
+        if(survivalrate>0.5) {
+          System.out.println("The punch connects cleanly and knocks him out. Congrats, you've won!");
+        } else{
+          System.out.println("The punch misses and Mehmet gets into an even more dominating position. You give up because there is no hope now.");
+        }
       }
     }
+  }
+
 
     else{
       survivalrate = Math.random();
@@ -96,7 +131,4 @@ public class MehmetBossFight {
       }
     }
 
-
-
   }
-}

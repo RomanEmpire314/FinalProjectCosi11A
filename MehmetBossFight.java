@@ -75,6 +75,11 @@ public class MehmetBossFight {
     }
   }
 
+  public static void finishOff(){
+    System.out.println("You continue to brutalize Mehmet. Much to his dismay. Finally you decide he's had enough and he seems near the end. So you let up.");
+    System.out.println("You have defeated the almighty boss Mehmet. Congrats!");
+  }
+
 
     else{
       survivalrate = Math.random();

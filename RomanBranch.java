@@ -25,6 +25,7 @@ public class RomanBranch {
 
   public static void rWalk1() {
     System.out.println("The walk was nice, you both felt invigorated yet still bored");
+    rRememberClass3c2s();
   }
 
   public static void rPush2() {
@@ -54,6 +55,30 @@ public class RomanBranch {
     } else if (userResponse == 2) {
       //get out of the pond
     }
+  }
+
+  public static void rOutPond3c2() {
+    System.out.println("You finally got out of the pond, change to some dry clothes\nYou wonder why you jumped into the pond in the first place");
+    //rememberClass
+  }
+
+  public static void rRememberClass3c2s () {
+    System.out.println("It’s 9:55 in the morning and COSI 11a starts in 5 minutes. You are starving as you haven’t got anything for breakfast, do you?");
+    System.out.println("1. Walk to class with an empty stomach\n2. Walk to SCC to get some bagels");
+    int userResponse = rScanner.nextInt();
+    if (userResponse == 1) {
+      //rClass3c2c1
+    } else if (userResponse == 2) {
+      //rSCC3c2c2
+    } else {
+      System.out.println("Invalid input. Try again!");
+      rRememberClass3c2s();
+    }
+  }
+
+  public static void rClass3c2c1 () {
+    System.out.println("You literally are starving!!!\nYour body is digesting itself for energy!");
+    Methods.healthChange(ProjectStart.health,-10);
   }
 
   

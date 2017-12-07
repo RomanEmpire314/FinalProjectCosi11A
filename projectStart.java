@@ -12,12 +12,12 @@ public class ProjectStart {
 
   public static void IntroductionAndName(){
     System.out.println("Hello, you've entered the MSRY simulator! You will be faced with many life or death decisions");
-    System.out.println("What is your name?");
+    System.out.println("You will be presetned with many choices. There will be a number in front of each choice.");
+    System.out.println("Depending on which choice/path you want to take, enter the number that corresponds to your choice.");
   }
 
   public static void start(){
     IntroductionAndName();
-    String name = scanner.nextLine();
     System.out.println("Where would you like to start?");
     System.out.println("1. Olin-Sang");
     System.out.println("2. Sherman");

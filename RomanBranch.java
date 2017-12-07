@@ -8,7 +8,7 @@ public class RomanBranch {
   }
 
   public static void rStart() {
-    System.out.println("It's a nice chilly morning in Massell pond. The sun is shining and the wind is blowing. You're sitting on the bench at Massell pond, chilling with your friend Ben.\nBen: \"Let’s get out of here\", do you:");
+    System.out.println("It's a nice chilly morning in Massell pond. The sun is shining and the wind is blowing. You're sitting on the bench at Massell pond, chilling with your friend Ben.\nBen: \"Let's get out of here\", do you:");
     System.out.println("1. Go walk around the Massell pond\n2. Push Ben off into the pond\n3. Jump down the pond yourself");
     int userResponse = rScanner.nextInt();
     if (userResponse == 1) {
@@ -181,7 +181,7 @@ public class RomanBranch {
 
   public static void rGive3c2c2c2c1() {
     System.out.println("The squirrel took your ID, examined it meticulously and then talk to its tiny little walkie talkie in the evilest high-pitched voice.\n \nIt’s them\n- it says. 10 seconds later, a large muscular squirrel shows up and beat you to death");
-    //Methods.death();
+    Methods.death();
   }
 
   public static void rNotGive3c2c2c2c2() {

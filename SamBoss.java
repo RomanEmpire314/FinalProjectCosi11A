@@ -48,7 +48,9 @@ public class SamBoss {
         roll(wincount, losecount);
       }
     }
-    /*
+    /* Adds 1 to wincount, prints a response
+    If they reach 2 for wincount, they win
+    If they are not at 2 yet, it rolls again
     */
   public static void rollGood(int wincount, int losecount, int rng){
     System.out.println("You rolled a "+rng+" darnit! That is one for you\n");
@@ -60,6 +62,11 @@ public class SamBoss {
     }
   }
 
+  /* Adds 1 to losecount, prints a response
+  If they reach 2 for losecount, they lose
+  If they are not at 2 yet, it rolls again
+  */
+
   public static void rollBad(int wincount, int losecount, int rng){
     System.out.println("You rolled a "+rng+" Haha! that's one for me!\n");
     losecount = losecount + 1;
@@ -70,12 +77,20 @@ public class SamBoss {
     }
   }
 
+  /*
+  Prints a win message
+  */
+
   public static void win(){
     System.out.println("You beat me this time, here is your project back, I guess I will try to make my own last minute...");
     System.out.println("Sam hands you your laptop back");
     System.out.println("We had Mehmet steal this from you earlier...\n");
     System.out.println("Congratulations! You have defeated Sam and won the game!");
   }
+
+  /*
+  Prints a lose message
+  */
 
   public static void lose(){
     System.out.println("Haha! you have lost my game and now your project is mine and Brandeis will be controlled by our squirrel army forever!");

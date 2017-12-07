@@ -16,6 +16,7 @@ public class Methods {
 	@return player's health after change
 	*/
 	public static int healthChange(int health, int change) {
+		System.out.println("Your current health is "+ (health+change));
 		if ((health + change) <= 0) {
 			System.out.println("Your health is zero, it's just too much to handle. Remember to go to the library to deal with stress and low health. You dead!!");
 			System.out.println("Do you want to play again? (y/n)");

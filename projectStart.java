@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class ProjectStart {
 
+  public static int health = 100;
   public static Scanner scanner = new Scanner(System.in);
 
   public static void main(String[] args){
@@ -17,7 +18,7 @@ public class ProjectStart {
     if (integerResponse==1){
       OlinSangIntro.FirstChoice();
     } else if (integerResponse==2){
-      //Sherman
+      ShermanIntro.IntroAndNameInput();
     } else if (integerResponse==3){
       RomanBranch.rStart();
     } else if (integerResponse==4){

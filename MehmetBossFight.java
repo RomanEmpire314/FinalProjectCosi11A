@@ -76,8 +76,19 @@ public class MehmetBossFight {
   }
 
   public static void finishOff(){
-    System.out.println("You continue to brutalize Mehmet. Much to his dismay. Finally you decide he's had enough and he seems near the end. So you let up.");
-    System.out.println("You have defeated the almighty boss Mehmet. Congrats!");
+    System.out.println("You are able to get him down and hurt him with some body blows. He is hurt by them.");
+    //deduct 20 health points from Mehmet
+    System.out.println("What do you want to do next?");
+    System.out.println("1) Get off him and proclaim victory!");
+    System.out.println("2) Continue with the body blows");
+    integerResponse = scanner.nextInt();
+      if(integerResponse==1) {
+        System.out.println(name+":'I am victorious! Get at me cuh!'");
+      }
+      else{
+        System.out.println("You continue to brutalize Mehmet. Much to his dismay. Finally you decide he's had enough and he seems near the end. So you let up.");
+        System.out.println("You have defeated the almighty boss Mehmet. Congrats!");
+      }
   }
 
 

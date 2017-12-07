@@ -109,11 +109,13 @@ public class FixMehmet {
   }
 
   public static void chargeMehmetS(){
+    int health = 100;
     double survivalrate = Math.random();
     if(survivalrate>0.9) {
       System.out.println("You got him down adeptly and apprehend him completely. Great job, you've defeated the boss Mehmet!");
     } else {
       System.out.println("Mehmet blocked your takedown attempt and reversed it on you. You got hurt by this maneuver.");
+      health = Methods.healthChange(health,-10);
       System.out.println("What is your next move?");
       chargeMehmet();
     }

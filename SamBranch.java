@@ -261,6 +261,12 @@ public class SamBranch {
           System.out.println("The squirrel scouts spear you like a kebab and use your body as a weapon to kill the rest of your friends.");
         } else {
           System.out.println("You and your friends defeat the pack of squirrels, steal their spears, and head to the SCC");
+          double chooseBoss = Math.random();
+          if (chooseBoss>0.2){
+            YaelBossFight.chooseFirstLook();
+          } else {
+            FixMehmet.mehmetBoss();
+          }
         }
       }
 
@@ -301,8 +307,10 @@ public class SamBranch {
         System.out.println("As your tears roll down your cheek, JJ's soul springs through your chest, he gives a sly smile to you, he transforms into a banana, and flings himeself past the guards");
         System.out.println("The guards get distracted by the banana and run over to the courtyard, so you and the rest of the students quickly sneak into the SCC");
         double chooseBoss = Math.random();
-        if (chooseBoss>0.5){
+        if (chooseBoss>0.2){
           YaelBossFight.chooseFirstLook();
+        } else {
+          FixMehmet.mehmetBoss();
         }
       }
 
@@ -310,7 +318,13 @@ public class SamBranch {
         System.out.println("a boulder comes rolling down the hill");
         double survivalRate = Math.random();
         if (survivalRate>0.9){
-          System.out.println("You dodge the boulder! Nice! You can just win the game there. Congratulations!");
+          System.out.println("You dodge the boulder! Nice! Now you run into the SCC");
+          double chooseBoss = Math.random();
+          if (chooseBoss>0.2){
+            YaelBossFight.chooseFirstLook();
+          } else {
+            FixMehmet.mehmetBoss();
+          }
         } else {
           System.out.println("The boulder crushes you before you can get out of the way");
         }

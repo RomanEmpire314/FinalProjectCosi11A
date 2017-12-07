@@ -10,6 +10,7 @@ public class SamBranch {
   }
 
       public static void goGosman(){
+        System.out.println("You've arrived at Gosman!");
         System.out.println("Worrying sounds of people crying surround you as you enter Gosman.");
         System.out.println("The dean Jamele Adams pulls you aside and says: <You guys have to be the one to stop this! You have to believe in yourself!");
         System.out.println("More importantly, I know a way you can save us. I know an administrative secret. Specifically, an administrative secret tunnel, called the Louis way that conencts through Gosman.");
@@ -299,6 +300,10 @@ public class SamBranch {
       public static void goStairs2(){
         System.out.println("As your tears roll down your cheek, JJ's soul springs through your chest, he gives a sly smile to you, he transforms into a banana, and flings himeself past the guards");
         System.out.println("The guards get distracted by the banana and run over to the courtyard, so you and the rest of the students quickly sneak into the SCC");
+        double chooseBoss = Math.random();
+        if (chooseBoss>0.5){
+          YaelBossFight.chooseFirstLook();
+        }
       }
 
       public static void goHill(){

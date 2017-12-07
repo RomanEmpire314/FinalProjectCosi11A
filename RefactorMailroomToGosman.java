@@ -52,6 +52,7 @@ public class RefactorMailroomToGosman{
           System.out.println("You've died. Guess you didn't have what it takes");
         }if(survivalrate<0.1){
           System.out.println("Oh my god, you've narrowly survived!! You jump over the counter, get your final project, kick down the door, and save your friend Yael in the process. Get out of there and head to Gosman!");
+          SamBranch.goGosman();
         }
       }
     }
@@ -73,6 +74,7 @@ public class RefactorMailroomToGosman{
       break;
     }
       }System.out.println("Oh my god! You've guessed it! Get out of here!!!! head to Gosman!!! A thought crosses your mind - who else was there? I think Yael...where did she go??");
+      SamBranch.goGosman();
     }
 
 

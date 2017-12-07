@@ -34,32 +34,32 @@ public class RomanBranch {
 
   public static void rJump3() {
     System.out.println("Ben tried to stop you but he couldn’t. It’s 40 degree outside and you’re freezing");
-    //lose health
+    ProjectStart.health = Methods.healthChange(ProjectStart.health,-10);
     System.out.println("Something funny touched your leg down in the pond, do you: ");
     System.out.println("1: Stay in the pond\n2: Get out of the pond");
     int userResponse = rScanner.nextInt();
     if (userResponse == 1) {
       rStay3c1();
     } else if (userResponse == 2) {
-      //get out of the pond
+      rOutPond3c2();
     }
  }
 
   public static void rStay3c1() {
     System.out.println("It's super cold as you stayed in the water, you still can't find anything funny");
-    //lose health
+    ProjectStart.health = Methods.healthChange(ProjectStart.health,-10);
     System.out.println("Do you:\n1: Stay in the pond\n2: Get out of the pond");
     int userResponse = rScanner.nextInt();
     if (userResponse == 1) {
       rStay3c1();
     } else if (userResponse == 2) {
-      //get out of the pond
+      rOutPond3c2();
     }
   }
 
   public static void rOutPond3c2() {
     System.out.println("You finally got out of the pond, change to some dry clothes\nYou wonder why you jumped into the pond in the first place");
-    //rememberClass
+    rRememberClass3c2s();
   }
 
   public static void rRememberClass3c2s () {
@@ -69,7 +69,7 @@ public class RomanBranch {
     if (userResponse == 1) {
       rClass3c2c1();
     } else if (userResponse == 2) {
-      //rSCC3c2c2
+      rSCC3c2c2();
     } else {
       System.out.println("Invalid input. Try again!");
       rRememberClass3c2s();
@@ -78,7 +78,7 @@ public class RomanBranch {
 
   public static void rClass3c2c1 () {
     System.out.println("You literally are starving!!!\nYour body is digesting itself for energy!");
-    Methods.healthChange(ProjectStart.health,-10);
+    ProjectStart.health = Methods.healthChange(ProjectStart.health,-10);
     seeMSRY();
   }
 
@@ -140,7 +140,7 @@ public class RomanBranch {
     }
 
       System.out.println("You really enjoyed your" + bagelChoice + "bagel with " + smearsChoice + " smears!");
-      Methods.healthChange(ProjectStart.health,10);
+      ProjectStart.health = Methods.healthChange(ProjectStart.health,10);
       seeMSRY();
   }
 
@@ -151,7 +151,7 @@ public class RomanBranch {
     int userInput = rScanner.nextInt();
     if (userInput == 1) {
       System.out.println("You kept walking without calling out to the MSRY");
-      //rSquirrle3c2c2c2s();
+      rSquirrle3c2c2c2s();
     } else if (userInput == 2) {
       System.out.println("You called them.\nOne of the 4 turned around as they heard their names\nFor some reasons, they decided to walk faster, ignoring your call\nYou think to yourself\"Huh? That's strange, MSRY are usually nice people?\"");
     } else if (userInput == 3) {
@@ -164,10 +164,41 @@ public class RomanBranch {
   }
 
   public static void rSquirrle3c2c2c2s() {
-    System.out.println("You kept walking towards the library.\nSuddenly, a considerably squirrel showed up right in front of you “I need to see your ID before letting you to pass”. While you still wrap your head around a talking squirrel do you
+    System.out.println("You kept walking towards the library.\nSuddenly, a considerably sizeable squirrel showed up right in front of you \"I need to see your ID before letting you pass\nWhile you still wrap your head around a talking squirrel, do you:");
+    System.out.println("1. Give it your Brandeis ID\n2. Don’t give your ID and walk away: \"Screw that\n");
+
+    int userInput = rScanner.nextInt();
+    if (userInput == 1) {
+      rGive3c2c2c2c1();
+    } else if (userInput == 2) {
+      rNotGive3c2c2c2c2();
+    } else {
+      System.out.println("Invalid input. Try again!");
+      rSquirrle3c2c2c2s();
+    }
+
+  }
+
+  public static void rGive3c2c2c2c1() {
+    System.out.println("The squirrel took your ID, examined it meticulously and then talk to its tiny little walkie talkie in the evilest high-pitched voice.\n \nIt’s them\n- it says. 10 seconds later, a large muscular squirrel shows up and beat you to death");
+    //Methods.death();
+  }
+
+  public static void rNotGive3c2c2c2c2() {
+    System.out.println("You ran into a group of Brandeis students, who are making their ways to Gosman: ");
+    System.out.println("1. \"Hell yeah, let's go to Gosman, woooo\"\n2. \"What the hell is going on?\"\n3. Panic");
+
+    int userInput = rScanner.nextInt();
+    if (userInput == 1) {
+      System.out.println("People appreaciate your enthusiasm while its helpfulness is limited");
+    } else if (userInput == 2) {
+      System.out.println("\"Squirrels\" - said them");
+    } else if (userInput == 3) {
+      System.out.println("Do you think panicking would really help in this situation?");
+    }
+    SamBranch.goGosman();
   }
 
 
 
-  
 }

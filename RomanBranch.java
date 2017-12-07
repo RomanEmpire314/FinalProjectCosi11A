@@ -154,6 +154,7 @@ public class RomanBranch {
       rSquirrle3c2c2c2s();
     } else if (userInput == 2) {
       System.out.println("You called them.\nOne of the 4 turned around as they heard their names\nFor some reasons, they decided to walk faster, ignoring your call\nYou think to yourself\"Huh? That's strange, MSRY are usually nice people?\"");
+      OlinSangIntro.ThirdChoiceDirections();
     } else if (userInput == 3) {
       Methods.panic();
       seeMSRY();
@@ -180,8 +181,17 @@ public class RomanBranch {
   }
 
   public static void rGive3c2c2c2c1() {
+    String userInput;
     System.out.println("The squirrel took your ID, examined it meticulously and then talk to its tiny little walkie talkie in the evilest high-pitched voice.\n \nIt’s them\n- it says. 10 seconds later, a large muscular squirrel shows up and beat you to death");
-    Methods.death();
+    System.out.println("The squirrel was too much to handle, you dead!!!");
+
+    System.out.println("Do you want to play again? (y/n)");
+    userInput = rScanner.nextLine();
+    if (userInput.equals("y")) {
+      ProjectStart.start();
+    } else {
+      System.out.println("Game over! Goodbye");
+    }
   }
 
   public static void rNotGive3c2c2c2c2() {

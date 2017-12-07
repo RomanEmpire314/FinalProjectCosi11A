@@ -67,7 +67,7 @@ public class RomanBranch {
     System.out.println("1. Walk to class with an empty stomach\n2. Walk to SCC to get some bagels");
     int userResponse = rScanner.nextInt();
     if (userResponse == 1) {
-      //rClass3c2c1
+      rClass3c2c1();
     } else if (userResponse == 2) {
       //rSCC3c2c2
     } else {
@@ -79,7 +79,76 @@ public class RomanBranch {
   public static void rClass3c2c1 () {
     System.out.println("You literally are starving!!!\nYour body is digesting itself for energy!");
     Methods.healthChange(ProjectStart.health,-10);
+    seeMSRY();
   }
+
+  public static void rSCC3c2c2 () {
+    Scanner bagelInput = new Scanner (System.in);
+    String bagelChoice;
+    String smearsChoice;
+
+    System.out.println("You're in good old Shapiro Student Center, facing Einstein Bros Bagels.\nWhat bagel would you like?");
+    System.out.println("1. Everything\n2. Honey whole wheat\n3. Sesame seed\n4. Asiago\n5. Chocolate chip\n6. Protein roll");
+    int userInput = bagelInput.nextInt();
+    switch (userInput) {
+      case 1:
+        bagelChoice = "Everything";
+        break;
+      case 2:
+        bagelChoice = "Honey whole wheat";
+        break;
+      case 3:
+        bagelChoice = "Seasame seed";
+        break;
+      case 4:
+        bagelChoice = "Asiago";
+        break;
+      case 5:
+        bagelChoice = "Chocolate chip";
+        break;
+      case 6:
+        bagelChoice = "Protein roll";
+        break;
+      default:
+        System.out.println("Invalid input. Try again!");
+        rSCC3c2c2();
+    }
+
+    System.out.println("What smears would you like?");
+    System.out.println("1. Plain\n2. Onion and chives\n3. Smoked salmon\n4. Strawberry\n5. Blueberry");
+    userInput = bagelInput.nextInt();
+
+    switch (userInput) {
+      case 1:
+        smearsChoice = "Plain";
+        break;
+      case 2:
+        smearsChoice = "Onion and chives";
+        break;
+      case 3:
+        smearsChoice = "Smoked salmon";
+        break;
+      case 4:
+        smearsChoice = "Strawberry";
+        break;
+      case 5:
+        smearsChoice = "Blueberry";
+        break;
+      default:
+        System.out.println("Invalid input. Try again!");
+        rSCC3c2c2();
+    }
+
+      System.out.println("You really enjoyed your" + bagelChoice + "bagel with " + smearsChoice + " smears!");
+      Methods.healthChange(ProjectStart.health,10);
+      seeMSRY();
+  }
+
+  public static void seeMSRY () {
+    System.out.println("On your way to class, you see MSRY walking, in front of you,\n look like they are up to no good. Do you");
+    System.out.println("1. Keep walking\n2. Call them \"Hey MSRY, what's up?\"\n3. Panic");
+  }
+
 
   
 }

@@ -262,10 +262,14 @@ public class SamBranch {
         } else {
           System.out.println("You and your friends defeat the pack of squirrels, steal their spears, and head to the SCC");
           double chooseBoss = Math.random();
-          if (chooseBoss>0.2){
+          if (chooseBoss<=0.25){
             YaelBossFight.chooseFirstLook();
-          } else {
+          } else if (chooseBoss>0.25&&chooseBoss<=0.50){
             FixMehmet.mehmetBoss();
+          } else if (chooseBoss>0.50&&chooseBoss<=0.75){
+            SamBoss.samBossIntro();
+          } else {
+            RomanBoss.firstFight();
           }
         }
       }
@@ -307,10 +311,14 @@ public class SamBranch {
         System.out.println("As your tears roll down your cheek, JJ's soul springs through your chest, he gives a sly smile to you, he transforms into a banana, and flings himeself past the guards");
         System.out.println("The guards get distracted by the banana and run over to the courtyard, so you and the rest of the students quickly sneak into the SCC");
         double chooseBoss = Math.random();
-        if (chooseBoss>0.2){
+        if (chooseBoss<=0.25){
           YaelBossFight.chooseFirstLook();
-        } else {
+        } else if (chooseBoss>0.25&&chooseBoss<=0.50){
           FixMehmet.mehmetBoss();
+        } else if (chooseBoss>0.50&&chooseBoss<=0.75){
+          SamBoss.samBossIntro();
+        } else {
+          RomanBoss.firstFight();
         }
       }
 
@@ -320,10 +328,14 @@ public class SamBranch {
         if (survivalRate>0.9){
           System.out.println("You dodge the boulder! Nice! Now you run into the SCC");
           double chooseBoss = Math.random();
-          if (chooseBoss>0.2){
+          if (chooseBoss<=0.25){
             YaelBossFight.chooseFirstLook();
-          } else {
+          } else if (chooseBoss>0.25&&chooseBoss<=0.50){
             FixMehmet.mehmetBoss();
+          } else if (chooseBoss>0.50&&chooseBoss<=0.75){
+            SamBoss.samBossIntro();
+          } else {
+            RomanBoss.firstFight();
           }
         } else {
           System.out.println("The boulder crushes you before you can get out of the way");

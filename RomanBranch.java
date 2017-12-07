@@ -84,8 +84,8 @@ public class RomanBranch {
 
   public static void rSCC3c2c2 () {
     Scanner bagelInput = new Scanner (System.in);
-    String bagelChoice = ";
-    String smearsChoice = ";
+    String bagelChoice = "";
+    String smearsChoice = "";
 
     System.out.println("You're in good old Shapiro Student Center, facing Einstein Bros Bagels.\nWhat bagel would you like?");
     System.out.println("1. Everything\n2. Honey whole wheat\n3. Sesame seed\n4. Asiago\n5. Chocolate chip\n6. Protein roll");
@@ -153,7 +153,7 @@ public class RomanBranch {
       System.out.println("You kept walking without calling out to the MSRY");
       rSquirrle3c2c2c2s();
     } else if (userInput == 2) {
-      System.out.println("You called them.\nOne of the 4 turned around as they heard their names\nFor some reasons, they decided to walk faster, ignoring your call\nYou think to yourself\"Huh? That's strange, MSRY are usually nice people?\");
+      System.out.println("You called them.\nOne of the 4 turned around as they heard their names\nFor some reasons, they decided to walk faster, ignoring your call\nYou think to yourself\"Huh? That's strange, MSRY are usually nice people?\"");
     } else if (userInput == 3) {
       Methods.panic();
       seeMSRY();
@@ -180,13 +180,13 @@ public class RomanBranch {
   }
 
   public static void rGive3c2c2c2c1() {
-    char userInput = ';
+    String userInput;
     System.out.println("The squirrel took your ID, examined it meticulously and then talk to its tiny little walkie talkie in the evilest high-pitched voice.\n \nIt’s them\n- it says. 10 seconds later, a large muscular squirrel shows up and beat you to death");
     System.out.println("The squirrel was too much to handle, you dead!!!");
 
     System.out.println("Do you want to play again? (y/n)");
-    userInput = rScanner.nextChar();
-    if (userInput == 'y') {
+    userInput = rScanner.nextLine();
+    if (userInput.equals("y")) {
       ProjectStart.start();
     } else {
       System.out.println("Game over! Goodbye");

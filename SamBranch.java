@@ -67,6 +67,15 @@ public class SamBranch {
         if (integerResponse==1){
           System.out.println("There is no time, the MSRY crew is in the SCC, and they must be stopped! I will bring you there.");
           System.out.println("You and your friends are teleported to the SCC.");
+          if (chooseBoss<=0.25){
+            YaelBossFight.chooseFirstLook();
+          } else if (chooseBoss>0.25&&chooseBoss<=0.50){
+            FixMehmet.mehmetBoss();
+          } else if (chooseBoss>0.50&&chooseBoss<=0.75){
+            SamBoss.samBossIntro();
+          } else {
+            RomanBoss.firstFight();
+          }    
         } else if (integerResponse==2){
           double survivalRate = Math.random();
           if (survivalRate>0.9){

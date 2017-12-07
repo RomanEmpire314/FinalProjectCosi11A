@@ -84,8 +84,8 @@ public class RomanBranch {
 
   public static void rSCC3c2c2 () {
     Scanner bagelInput = new Scanner (System.in);
-    String bagelChoice;
-    String smearsChoice;
+    String bagelChoice = "";
+    String smearsChoice = "";
 
     System.out.println("You're in good old Shapiro Student Center, facing Einstein Bros Bagels.\nWhat bagel would you like?");
     System.out.println("1. Everything\n2. Honey whole wheat\n3. Sesame seed\n4. Asiago\n5. Chocolate chip\n6. Protein roll");

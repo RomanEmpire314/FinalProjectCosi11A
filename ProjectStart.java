@@ -33,7 +33,7 @@ public class ProjectStart {
     if (integerResponse==1){
       OlinSangIntro.FirstChoice();
     } else if (integerResponse==2){
-      ShermanIntro.IntroAndNameInput();
+      ShermanIntro.FirstChoiceInstructions();
     } else if (integerResponse==3){
       RomanBranch.rStart();
     } else if (integerResponse==4){

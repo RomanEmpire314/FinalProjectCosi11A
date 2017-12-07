@@ -191,7 +191,7 @@ public class FixMehmet {
     if(survivalrate>0.5) {
       System.out.println("You try an arm triangle and succeed. As Mehmet feels his arm contort in a painful manner, he taps out. Congrats, you win!");
     }
-    else if(survivalrate<0.5) {
+    else if(survivalrate<=0.5) {
       System.out.println("You submission attempt fails. In attempting it, you expended too much energy.");
       System.out.println("As Mehmet looks to counter your attempt, he easily reverses the position. You are dead tired, and submit to his move.");
     }

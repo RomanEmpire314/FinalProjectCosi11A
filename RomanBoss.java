@@ -3,10 +3,18 @@ import java.util.Scanner;
 public class RomanBoss {
   public static Scanner rbScanner = new Scanner (System.in);
   
+  /**
+  main method to run the program
+  */
   public static void main (String [] args) {
     firstFight();
   }
 
+  /**
+  this method is a number guessing game that let you guess for 6 times. You move to the second game once the number is guessed
+  @param none
+  @return void
+  */
   public static void firstFight() {
     int guess;
     int answer;
@@ -40,6 +48,10 @@ public class RomanBoss {
     }
 
   }
+
+  /**
+  secondFight() is the second game where it ask you the basic of biology and user has to enter a a string. The game is won if the answer is correct
+  */
 
   public static void secondFight () {
     Scanner scanner = new Scanner (System.in);

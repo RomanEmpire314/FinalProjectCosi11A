@@ -154,6 +154,7 @@ public class RomanBranch {
       rSquirrle3c2c2c2s();
     } else if (userInput == 2) {
       System.out.println("You called them.\nOne of the 4 turned around as they heard their names\nFor some reasons, they decided to walk faster, ignoring your call\nYou think to yourself\"Huh? That's strange, MSRY are usually nice people?\"");
+      OlinSangIntro.ThirdChoiceDirections();
     } else if (userInput == 3) {
       Methods.panic();
       seeMSRY();

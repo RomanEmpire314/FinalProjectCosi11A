@@ -147,7 +147,26 @@ public class RomanBranch {
   public static void seeMSRY () {
     System.out.println("On your way to class, you see MSRY walking, in front of you,\n look like they are up to no good. Do you");
     System.out.println("1. Keep walking\n2. Call them \"Hey MSRY, what's up?\"\n3. Panic");
+
+    int userInput = rScanner.nextInt();
+    if (userInput == 1) {
+      System.out.println("You kept walking without calling out to the MSRY");
+      //rSquirrle3c2c2c2s();
+    } else if (userInput == 2) {
+      System.out.println("You called them.\nOne of the 4 turned around as they heard their names\nFor some reasons, they decided to walk faster, ignoring your call\nYou think to yourself\"Huh? That's strange, MSRY are usually nice people?\"");
+    } else if (userInput == 3) {
+      Methods.panic();
+      seeMSRY();
+    } else {
+      System.out.println("Invalid input. Try again!");
+      seeMSRY();
+    }
   }
+
+  public static void rSquirrle3c2c2c2s() {
+    System.out.println("You kept walking towards the library.\nSuddenly, a considerably squirrel showed up right in front of you “I need to see your ID before letting you to pass”. While you still wrap your head around a talking squirrel do you
+  }
+
 
 
   

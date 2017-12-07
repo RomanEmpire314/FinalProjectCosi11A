@@ -12,7 +12,7 @@ public class Methods {
 	@param int change: the change of health (could increase or decrease)
 	@return player's health after change
 	*/
-	public static int changeHealth(int health, int change) {
+	public static int healthChange(int health, int change) {
 		if ((health + change) <= 0) {
 			//die
 		} else if (change >= 0) {

@@ -49,7 +49,7 @@ located in the methods file.
 
 public static void SnakesChoiceOne(int health){
   System.out.println("You have fallen into a pit of snakes!!!!! and lost health points! Not dead yet though! Get outta there!");
-  health = Methods.changeHealth(health,-50);
+  ProjectStart.health = Methods.healthChange(ProjectStart.health,-50);
   System.out.printf("health = %d%n",health);
   chooseSecond(health);
 }
@@ -70,7 +70,7 @@ public static void chooseSecond(int health){
   String stringResponse = scanner.nextLine();
 while(!stringResponse.equals("jump")){
     System.out.println("You are bad at jumping barrels! -10 health!");
-    health = Methods.changeHealth(health,-10);
+    ProjectStart.health = Methods.healthChange(ProjectStart.health,-10);
     System.out.printf("health = %d%n",health);
     chooseSecondDirections();
     stringResponse = scanner.nextLine();
@@ -167,7 +167,7 @@ public static void choiceFourDirections(){
 
 /** this is the user's final challenge of the boss fight.
 the user has to enter the answer to a puzzle annogram (the answer is Grace Hopper)
-when they do, they have won! 
+when they do, they have won!
 */
 
 public static void finalChallenge(){

@@ -7,6 +7,15 @@ public class ProjectStart {
   public static Scanner scanner = new Scanner(System.in);
 
   public static void main(String[] args){
+    start();
+  }
+
+  public static void IntroductionAndName(){
+    System.out.println("Hello, you've entered the MSRY simulator! You will be faced with many life or death decisions");
+    System.out.println("What is your name?");
+  }
+
+  public static void start(){
     IntroductionAndName();
     String name = scanner.nextLine();
     System.out.println("Where would you like to start?");
@@ -26,10 +35,5 @@ public class ProjectStart {
       integerResponse = scanner.nextInt();
       RefactorMailroomToGosman.ChoiceOne(integerResponse);
     }
-  }
-
-  public static void IntroductionAndName(){
-    System.out.println("Hello, you've entered the MSRY simulator! You will be faced with many life or death decisions");
-    System.out.println("What is your name?");
   }
 }
